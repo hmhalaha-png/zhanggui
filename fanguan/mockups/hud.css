@@ -1,0 +1,134 @@
+/* 样张 A / C 共用的界面层（横屏手机 844×390） */
+@font-face {
+  font-family: 'Ma Shan Zheng';
+  src: url(fonts/mashanzheng.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  font-weight: 600;
+  src: url(fonts/notoserifsc-600.woff2) format('woff2');
+}
+
+:root {
+  --wood: #3b2618;
+  --wood-hi: #5a3a22;
+  --gold: #e9c97a;
+  --paper: #f6ecd4;
+  --ink: #3a2616;
+  --red: #a8342a;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #cfae7e;
+}
+
+#stage {
+  position: absolute;
+  inset: 0;
+}
+#stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: 'Noto Serif SC', 'WenQuanYi Zen Hei', serif;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.hud .top {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.plaque {
+  background: linear-gradient(#4a2f1c, var(--wood));
+  border: 2px solid #8c6a3a;
+  outline: 1px solid #241509;
+  border-radius: 3px;
+  padding: 1px 10px 2px;
+  color: var(--gold);
+  font-family: 'Ma Shan Zheng', serif;
+  font-size: 22px;
+  line-height: 26px;
+  box-shadow: 0 2px 4px rgba(40, 20, 5, 0.35);
+}
+.plaque small {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 12px;
+  color: #f3dfae;
+  margin-left: 6px;
+}
+.chip {
+  background: rgba(42, 26, 14, 0.78);
+  border: 1px solid rgba(233, 201, 122, 0.55);
+  border-radius: 14px;
+  padding: 3px 10px;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.chip b {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hud .note {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(246, 236, 212, 0.94);
+  color: var(--ink);
+  border: 1px solid #9c7a4a;
+  border-left: 4px solid var(--red);
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 17px;
+  box-shadow: 0 2px 4px rgba(40, 20, 5, 0.25);
+}
+
+.hud .btns {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  display: flex;
+  gap: 8px;
+}
+.btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #6a4428, var(--wood));
+  border: 2px solid #b08a4e;
+  color: var(--gold);
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 5px rgba(40, 20, 5, 0.4);
+}
+
+.tag {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-family: 'WenQuanYi Zen Hei', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
