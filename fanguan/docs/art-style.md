@@ -1,6 +1,7 @@
 # 美术风格评估（阶段 0 立项）
 
-> 状态：**已选 A（2.5D 等距古风），时代是宋。** 后续见 [design.md](design.md)。
+> 状态：**已选 A（2.5D 等距古风），时代是宋，人物用代码画。** 后续见 [design.md](design.md)；
+> 按参考图拆解后重画的开局场景是样张 E（`../mockups/out/e-river.png`），拆解记录见 [reference-breakdown.md](reference-breakdown.md)。
 
 ## 前提
 

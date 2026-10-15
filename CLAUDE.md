@@ -68,5 +68,6 @@
 
 - 根目录：《箭雨冲冲冲》，安卓手机小游戏（PWA）。
 - `raft/`：《少年与海》，深海木筏求生的玩法实验（已停止开发，不再修复）。设计与接口见 `raft/CONTRACT.md`。
-- `fanguan/`：古代饭馆模拟器（暂名），安卓手机，只做横屏。美术风格已定 A（2.5D 等距古风），时代是宋。
-  阶段 0：策划见 `fanguan/docs/design.md`，风格评估见 `fanguan/docs/art-style.md`。
+- `fanguan/`：古代饭馆模拟器（暂名），安卓手机，只做横屏。美术风格已定 A（2.5D 等距古风），时代是北宋，人物用代码画。
+  开局是汴京城外汴河岸边的路边茶摊。阶段 0：策划见 `fanguan/docs/design.md`，参考图拆解见 `fanguan/docs/reference-breakdown.md`。
+  用户发的参考图是别人游戏的截图，只能学，不能抠图进游戏，也不放进仓库。

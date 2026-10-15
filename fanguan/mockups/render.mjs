@@ -11,6 +11,8 @@ const pages = {
   b: 'b-pixel.html',
   c: 'c-3d.html',
   d: 'd-side.html',
+  e: 'e-river.html',
+  'e-clean': 'e-river.html?clean',
 };
 const want = process.argv.slice(2);
 const list = Object.entries(pages).filter(([k]) => !want.length || want.includes(k));
@@ -45,9 +47,9 @@ for (const [key, file] of list) {
   } catch {
     errors.push('timeout waiting for __ready');
   }
-  const out = join(root, 'out', file.replace('.html', '.png'));
-  await page.screenshot({ path: out });
-  console.log(errors.length ? `✗ ${file}\n  ${errors.join('\n  ')}` : `✓ ${file} → out/${file.replace('.html', '.png')}`);
+  const name = file.replace('.html?clean', '-clean.png').replace('.html', '.png');
+  await page.screenshot({ path: join(root, 'out', name), timeout: 180000 });
+  console.log(errors.length ? `✗ ${file}\n  ${errors.join('\n  ')}` : `✓ ${file} → out/${name}`);
   if (errors.length) failed = true;
   await page.close();
 }
